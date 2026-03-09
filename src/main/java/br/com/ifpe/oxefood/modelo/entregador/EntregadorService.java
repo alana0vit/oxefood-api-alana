@@ -1,11 +1,11 @@
 package br.com.ifpe.oxefood.modelo.entregador;
 
-import jakarta.transaction.Transactional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import jakarta.transaction.Transactional;
 
 @Service
 public class EntregadorService {
@@ -38,6 +38,17 @@ public class EntregadorService {
         entregador.setCpf(entregadorAlterado.getCpf());
         entregador.setFoneCelular(entregadorAlterado.getFoneCelular());
         entregador.setFoneFixo(entregadorAlterado.getFoneFixo());
+        entregador.setRg(entregadorAlterado.getRg());
+        entregador.setQtdEntregaRealizadas(entregadorAlterado.getQtdEntregaRealizadas());
+        entregador.setValorFrete(entregadorAlterado.getValorFrete());
+        entregador.setEnderecoRua(entregadorAlterado.getEnderecoRua());
+        entregador.setEnderecoComplemento(entregadorAlterado.getEnderecoComplemento());
+        entregador.setEnderecoNumero(entregadorAlterado.getEnderecoNumero());
+        entregador.setEnderecoBairro(entregadorAlterado.getEnderecoBairro());
+        entregador.setEnderecoCidade(entregadorAlterado.getEnderecoCidade());
+        entregador.setEnderecoUf(entregadorAlterado.getEnderecoUf());
+        entregador.setEnderecoCep(entregadorAlterado.getEnderecoCep());
+        entregador.setAtivo(entregadorAlterado.getAtivo());
 
         repository.save(entregador);
     }
